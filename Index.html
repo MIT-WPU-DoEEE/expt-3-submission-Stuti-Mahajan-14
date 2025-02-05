@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital Appointment Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Hospital Appointment Form</h2>
+        <form id="appointmentForm" action="submit.php" method="POST">
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+
+            <label for="phone">Phone:</label>
+            <input type="text" id="phone" name="phone" placeholder="Enter your phone number" required pattern="[0-9]{10}" title="Enter a 10-digit phone number">
+
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" placeholder="Enter your age" required min="1">
+
+            <label for="gender">Gender:</label>
+            <select id="gender" name="gender" required>
+                <option value="">Select Gender</option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+                <option value="Other">Other</option>
+            </select>
+
+            <label for="department">Department:</label>
+            <select id="department" name="department" required>
+                <option value="">Select Department</option>
+                <option value="General">General</option>
+                <option value="Cardiology">Cardiology</option>
+                <option value="Neurology">Neurology</option>
+                <option value="Orthopedics">Orthopedics</option>
+            </select>
+
+            <label for="time">Preferred Appointment Time:</label>
+            <input type="time" id="time" name="time" required>
+
+            <button type="submit">Submit</button>
+        </form>
+        <p id="response"></p>
+    </div>
+</body>
+</html>
